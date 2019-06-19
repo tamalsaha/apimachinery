@@ -94,6 +94,7 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 		"github.com/kubedb/apimachinery/apis/kubedb/v1alpha1.PostgresSummary":              schema_apimachinery_apis_kubedb_v1alpha1_PostgresSummary(ref),
 		"github.com/kubedb/apimachinery/apis/kubedb/v1alpha1.PostgresTableInfo":            schema_apimachinery_apis_kubedb_v1alpha1_PostgresTableInfo(ref),
 		"github.com/kubedb/apimachinery/apis/kubedb/v1alpha1.PostgresWALSourceSpec":        schema_apimachinery_apis_kubedb_v1alpha1_PostgresWALSourceSpec(ref),
+		"github.com/kubedb/apimachinery/apis/kubedb/v1alpha1.ProxysqlSpec":                 schema_apimachinery_apis_kubedb_v1alpha1_ProxysqlSpec(ref),
 		"github.com/kubedb/apimachinery/apis/kubedb/v1alpha1.RecoveryTarget":               schema_apimachinery_apis_kubedb_v1alpha1_RecoveryTarget(ref),
 		"github.com/kubedb/apimachinery/apis/kubedb/v1alpha1.Redis":                        schema_apimachinery_apis_kubedb_v1alpha1_Redis(ref),
 		"github.com/kubedb/apimachinery/apis/kubedb/v1alpha1.RedisClusterSpec":             schema_apimachinery_apis_kubedb_v1alpha1_RedisClusterSpec(ref),
@@ -2660,7 +2661,106 @@ func schema_apimachinery_apis_kubedb_v1alpha1_Percona(ref common.ReferenceCallba
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
+<<<<<<< HEAD
 				Description: "ComponentStatus (and ComponentStatusList) holds the cluster validation info.",
+=======
+				Type: []string{"object"},
+				Properties: map[string]spec.Schema{
+					"elasticsearch": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Elasticsearch Spec",
+							Ref:         ref("github.com/kubedb/apimachinery/apis/kubedb/v1alpha1.ElasticsearchSpec"),
+						},
+					},
+					"postgres": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Postgres Spec",
+							Ref:         ref("github.com/kubedb/apimachinery/apis/kubedb/v1alpha1.PostgresSpec"),
+						},
+					},
+					"mysql": {
+						SchemaProps: spec.SchemaProps{
+							Description: "MySQL Spec",
+							Ref:         ref("github.com/kubedb/apimachinery/apis/kubedb/v1alpha1.MySQLSpec"),
+						},
+					},
+					"percona": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Percona Spec",
+							Ref:         ref("github.com/kubedb/apimachinery/apis/kubedb/v1alpha1.PerconaSpec"),
+						},
+					},
+					"mariadb": {
+						SchemaProps: spec.SchemaProps{
+							Description: "MariaDB Spec",
+							Ref:         ref("github.com/kubedb/apimachinery/apis/kubedb/v1alpha1.MariaDBSpec"),
+						},
+					},
+					"mongodb": {
+						SchemaProps: spec.SchemaProps{
+							Description: "MongoDB Spec",
+							Ref:         ref("github.com/kubedb/apimachinery/apis/kubedb/v1alpha1.MongoDBSpec"),
+						},
+					},
+					"redis": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Redis Spec",
+							Ref:         ref("github.com/kubedb/apimachinery/apis/kubedb/v1alpha1.RedisSpec"),
+						},
+					},
+					"memcached": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Memcached Spec",
+							Ref:         ref("github.com/kubedb/apimachinery/apis/kubedb/v1alpha1.MemcachedSpec"),
+						},
+					},
+					"etcd": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Etcd Spec",
+							Ref:         ref("github.com/kubedb/apimachinery/apis/kubedb/v1alpha1.EtcdSpec"),
+						},
+					},
+				},
+			},
+		},
+		Dependencies: []string{
+			"github.com/kubedb/apimachinery/apis/kubedb/v1alpha1.ElasticsearchSpec", "github.com/kubedb/apimachinery/apis/kubedb/v1alpha1.EtcdSpec", "github.com/kubedb/apimachinery/apis/kubedb/v1alpha1.MariaDBSpec", "github.com/kubedb/apimachinery/apis/kubedb/v1alpha1.MemcachedSpec", "github.com/kubedb/apimachinery/apis/kubedb/v1alpha1.MongoDBSpec", "github.com/kubedb/apimachinery/apis/kubedb/v1alpha1.MySQLSpec", "github.com/kubedb/apimachinery/apis/kubedb/v1alpha1.PerconaSpec", "github.com/kubedb/apimachinery/apis/kubedb/v1alpha1.PostgresSpec", "github.com/kubedb/apimachinery/apis/kubedb/v1alpha1.RedisSpec"},
+	}
+}
+
+func schema_apimachinery_apis_kubedb_v1alpha1_PXCSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Type: []string{"object"},
+				Properties: map[string]spec.Schema{
+					"clusterName": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Name of the cluster and should be identical on all nodes.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"proxysql": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Proxysql configuration",
+							Ref:         ref("github.com/kubedb/apimachinery/apis/kubedb/v1alpha1.ProxysqlSpec"),
+						},
+					},
+				},
+			},
+		},
+		Dependencies: []string{
+			"github.com/kubedb/apimachinery/apis/kubedb/v1alpha1.ProxysqlSpec"},
+	}
+}
+
+func schema_apimachinery_apis_kubedb_v1alpha1_Percona(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "Percona defines a percona variation of Mysql database.",
+>>>>>>> Add proxysql
 				Type:        []string{"object"},
 				Properties: map[string]spec.Schema{
 					"kind": {
@@ -3436,7 +3536,38 @@ func schema_k8sio_api_core_v1_ContainerState(ref common.ReferenceCallback) commo
 	}
 }
 
+<<<<<<< HEAD
 func schema_k8sio_api_core_v1_ContainerStateRunning(ref common.ReferenceCallback) common.OpenAPIDefinition {
+=======
+func schema_apimachinery_apis_kubedb_v1alpha1_ProxysqlSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Type: []string{"object"},
+				Properties: map[string]spec.Schema{
+					"replicas": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Number of Proxysql nodes. Currently we support only replicas = 1.",
+							Type:        []string{"integer"},
+							Format:      "int32",
+						},
+					},
+					"podTemplate": {
+						SchemaProps: spec.SchemaProps{
+							Description: "PodTemplate is an optional configuration for pods used to expose proxysql",
+							Ref:         ref("kmodules.xyz/offshoot-api/api/v1.PodTemplateSpec"),
+						},
+					},
+				},
+			},
+		},
+		Dependencies: []string{
+			"kmodules.xyz/offshoot-api/api/v1.PodTemplateSpec"},
+	}
+}
+
+func schema_apimachinery_apis_kubedb_v1alpha1_RecoveryTarget(ref common.ReferenceCallback) common.OpenAPIDefinition {
+>>>>>>> Add proxysql
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{

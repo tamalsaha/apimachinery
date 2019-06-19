@@ -20733,7 +20733,24 @@
         }
       }
     },
+<<<<<<< HEAD
     "dev.kubedb.apimachinery.apis.kubedb.v1alpha1.PerconaSpec": {
+=======
+    "com.github.kubedb.apimachinery.apis.kubedb.v1alpha1.PXCSpec": {
+      "type": "object",
+      "properties": {
+        "clusterName": {
+          "description": "Name of the cluster and should be identical on all nodes.",
+          "type": "string"
+        },
+        "proxysql": {
+          "description": "Proxysql configuration",
+          "$ref": "#/definitions/com.github.kubedb.apimachinery.apis.kubedb.v1alpha1.ProxysqlSpec"
+        }
+      }
+    },
+    "com.github.kubedb.apimachinery.apis.kubedb.v1alpha1.PerconaSpec": {
+>>>>>>> Add proxysql
       "type": "object",
       "required": [
         "version"
@@ -20758,6 +20775,10 @@
         "podTemplate": {
           "description": "PodTemplate is an optional configuration for pods used to expose database",
           "$ref": "#/definitions/xyz.kmodules.offshoot-api.api.v1.PodTemplateSpec"
+        },
+        "pxc": {
+          "description": "PXC is the cluster specification for Percona XtraDB Cluster",
+          "$ref": "#/definitions/com.github.kubedb.apimachinery.apis.kubedb.v1alpha1.PXCSpec"
         },
         "replicas": {
           "description": "Number of instances to deploy for Percona",
@@ -20989,7 +21010,25 @@
         }
       }
     },
+<<<<<<< HEAD
     "dev.kubedb.apimachinery.apis.kubedb.v1alpha1.RecoveryTarget": {
+=======
+    "com.github.kubedb.apimachinery.apis.kubedb.v1alpha1.ProxysqlSpec": {
+      "type": "object",
+      "properties": {
+        "podTemplate": {
+          "description": "PodTemplate is an optional configuration for pods used to expose proxysql",
+          "$ref": "#/definitions/xyz.kmodules.offshoot-api.api.v1.PodTemplateSpec"
+        },
+        "replicas": {
+          "description": "Number of Proxysql nodes. Currently we support only replicas = 1.",
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "com.github.kubedb.apimachinery.apis.kubedb.v1alpha1.RecoveryTarget": {
+>>>>>>> Add proxysql
       "type": "object",
       "properties": {
         "targetInclusive": {
