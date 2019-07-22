@@ -20733,10 +20733,7 @@
         }
       }
     },
-<<<<<<< HEAD
-    "dev.kubedb.apimachinery.apis.kubedb.v1alpha1.PerconaSpec": {
-=======
-    "com.github.kubedb.apimachinery.apis.kubedb.v1alpha1.PXCSpec": {
+    "dev.kubedb.apimachinery.apis.kubedb.v1alpha1.PXCSpec": {
       "type": "object",
       "properties": {
         "clusterName": {
@@ -20745,12 +20742,11 @@
         },
         "proxysql": {
           "description": "Proxysql configuration",
-          "$ref": "#/definitions/com.github.kubedb.apimachinery.apis.kubedb.v1alpha1.ProxysqlSpec"
+          "$ref": "#/definitions/dev.kubedb.apimachinery.apis.kubedb.v1alpha1.ProxysqlSpec"
         }
       }
     },
-    "com.github.kubedb.apimachinery.apis.kubedb.v1alpha1.PerconaSpec": {
->>>>>>> Add proxysql
+    "dev.kubedb.apimachinery.apis.kubedb.v1alpha1.PerconaSpec": {
       "type": "object",
       "required": [
         "version"
@@ -20778,7 +20774,7 @@
         },
         "pxc": {
           "description": "PXC is the cluster specification for Percona XtraDB Cluster",
-          "$ref": "#/definitions/com.github.kubedb.apimachinery.apis.kubedb.v1alpha1.PXCSpec"
+          "$ref": "#/definitions/dev.kubedb.apimachinery.apis.kubedb.v1alpha1.PXCSpec"
         },
         "replicas": {
           "description": "Number of instances to deploy for Percona",
@@ -21010,10 +21006,7 @@
         }
       }
     },
-<<<<<<< HEAD
-    "dev.kubedb.apimachinery.apis.kubedb.v1alpha1.RecoveryTarget": {
-=======
-    "com.github.kubedb.apimachinery.apis.kubedb.v1alpha1.ProxysqlSpec": {
+    "dev.kubedb.apimachinery.apis.kubedb.v1alpha1.ProxysqlSpec": {
       "type": "object",
       "properties": {
         "podTemplate": {
@@ -21027,8 +21020,7 @@
         }
       }
     },
-    "com.github.kubedb.apimachinery.apis.kubedb.v1alpha1.RecoveryTarget": {
->>>>>>> Add proxysql
+    "dev.kubedb.apimachinery.apis.kubedb.v1alpha1.RecoveryTarget": {
       "type": "object",
       "properties": {
         "targetInclusive": {
