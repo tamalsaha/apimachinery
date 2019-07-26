@@ -4,6 +4,7 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
+// +kubebuilder:object:root=false
 // +k8s:deepcopy-gen=false
 // +k8s:gen-deepcopy=false
 type Report struct {
@@ -13,6 +14,7 @@ type Report struct {
 	Status            ReportStatus  `json:"status,omitempty"`
 }
 
+// +kubebuilder:object:root=false
 // +k8s:deepcopy-gen=false
 // +k8s:gen-deepcopy=false
 type ReportSummary struct {
@@ -26,4 +28,3 @@ type ReportStatus struct {
 	StartTime      *metav1.Time `json:"startTime,omitempty"`
 	CompletionTime *metav1.Time `json:"completionTime,omitempty"`
 }
-
