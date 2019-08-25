@@ -19,9 +19,15 @@ import (
 
 	"google.golang.org/grpc/codes"
 
+<<<<<<< HEAD
 	"go.opencensus.io/trace"
 	"go.opencensus.io/trace/propagation"
 	"golang.org/x/net/context"
+=======
+	"context"
+	"go.opencensus.io/trace"
+	"go.opencensus.io/trace/propagation"
+>>>>>>> revendor
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/stats"
 	"google.golang.org/grpc/status"
