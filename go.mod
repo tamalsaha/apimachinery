@@ -3,11 +3,19 @@ module kubedb.dev/apimachinery
 go 1.12
 
 require (
+	github.com/PuerkitoBio/purell v1.1.1 // indirect
 	github.com/appscode/docker-registry-client v0.0.0-20180426150142-1bb02bb202b0
 	github.com/appscode/go v0.0.0-20190808133642-1d4ef1f1c1e0
+	github.com/dnaeon/go-vcr v1.0.1 // indirect
+	github.com/docker/distribution v2.7.1+incompatible // indirect
 	github.com/go-openapi/spec v0.19.0
+	github.com/go-openapi/swag v0.19.0 // indirect
 	github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b
+	github.com/gorilla/mux v1.7.3 // indirect
+	github.com/imdario/mergo v0.3.7 // indirect
 	github.com/json-iterator/go v1.1.6
+	github.com/konsorten/go-windows-terminal-sequences v1.0.2 // indirect
+	github.com/mailru/easyjson v0.0.0-20190403194419-1ea4449da983 // indirect
 	github.com/orcaman/concurrent-map v0.0.0-20190314100340-2693aad1ed75
 	github.com/pkg/errors v0.8.1
 	github.com/robfig/cron/v3 v3.0.0
