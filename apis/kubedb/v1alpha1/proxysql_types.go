@@ -94,16 +94,12 @@ type ProxySQLSpec struct {
 
 type ProxySQLBackendSpec struct {
 	// Ref lets one to locate the typed referenced object
-	// (in our case, it is the backend database object)
+	// (in our case, it is the MySQL/Percona-XtraDB/MariaDB object)
 	// inside the same namespace.
 	Ref *core.TypedLocalObjectReference `json:"ref,omitempty" protobuf:"bytes,7,opt,name=ref"`
 
 	// Number of backend servers.
 	Replicas *int32 `json:"replicas,omitempty"`
-
-	// Reference to backend MySQL/Percona-XtraDB/MariaDB object where the
-	// target database is located
-	AppBindingName string `json:"appBindingName,omitempty"`
 }
 
 type ProxySQLStatus struct {
