@@ -18643,7 +18643,7 @@ func schema_apimachinery_apis_kubedb_v1alpha1_ProxySQLBackendSpec(ref common.Ref
 				Properties: map[string]spec.Schema{
 					"ref": {
 						SchemaProps: spec.SchemaProps{
-							Description: "Ref lets one to locate the typed referenced object (in our case, it is the backend database object) inside the same namespace.",
+							Description: "Ref lets one to locate the typed referenced object (in our case, it is the MySQL/Percona-XtraDB/MariaDB object) inside the same namespace.",
 							Ref:         ref("k8s.io/api/core/v1.TypedLocalObjectReference"),
 						},
 					},
@@ -18652,13 +18652,6 @@ func schema_apimachinery_apis_kubedb_v1alpha1_ProxySQLBackendSpec(ref common.Ref
 							Description: "Number of backend servers.",
 							Type:        []string{"integer"},
 							Format:      "int32",
-						},
-					},
-					"appBindingName": {
-						SchemaProps: spec.SchemaProps{
-							Description: "Reference to backend MySQL/Percona-XtraDB/MariaDB object where the target database is located",
-							Type:        []string{"string"},
-							Format:      "",
 						},
 					},
 				},
@@ -18795,13 +18788,6 @@ func schema_apimachinery_apis_kubedb_v1alpha1_ProxySQLSpec(ref common.ReferenceC
 						SchemaProps: spec.SchemaProps{
 							Description: "updateStrategy indicates the StatefulSetUpdateStrategy that will be employed to update Pods in the StatefulSet when a revision is made to Template.",
 							Ref:         ref("k8s.io/api/apps/v1.StatefulSetUpdateStrategy"),
-						},
-					},
-					"terminationPolicy": {
-						SchemaProps: spec.SchemaProps{
-							Description: "TerminationPolicy controls the delete operation for database",
-							Type:        []string{"string"},
-							Format:      "",
 						},
 					},
 				},
