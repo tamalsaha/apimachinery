@@ -18790,13 +18790,6 @@ func schema_apimachinery_apis_kubedb_v1alpha1_ProxySQLSpec(ref common.ReferenceC
 							Ref:         ref("k8s.io/api/apps/v1.StatefulSetUpdateStrategy"),
 						},
 					},
-					"terminationPolicy": {
-						SchemaProps: spec.SchemaProps{
-							Description: "TerminationPolicy controls the delete operation for database",
-							Type:        []string{"string"},
-							Format:      "",
-						},
-					},
 				},
 				Required: []string{"version"},
 			},

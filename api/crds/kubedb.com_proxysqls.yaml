@@ -4510,9 +4510,6 @@ spec:
             storageType:
               description: StorageType can be durable (default) or ephemeral
               type: string
-            terminationPolicy:
-              description: TerminationPolicy controls the delete operation for database
-              type: string
             updateStrategy:
               description: updateStrategy indicates the StatefulSetUpdateStrategy
                 that will be employed to update Pods in the StatefulSet when a revision

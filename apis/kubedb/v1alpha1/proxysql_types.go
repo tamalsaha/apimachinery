@@ -86,10 +86,6 @@ type ProxySQLSpec struct {
 	// employed to update Pods in the StatefulSet when a revision is made to
 	// Template.
 	UpdateStrategy apps.StatefulSetUpdateStrategy `json:"updateStrategy,omitempty"`
-
-	// TerminationPolicy controls the delete operation for database
-	// +optional
-	TerminationPolicy TerminationPolicy `json:"terminationPolicy,omitempty"`
 }
 
 type ProxySQLBackendSpec struct {
