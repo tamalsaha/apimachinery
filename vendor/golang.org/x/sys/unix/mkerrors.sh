@@ -183,10 +183,7 @@ struct ltchars {
 #include <sys/socket.h>
 #include <sys/xattr.h>
 #include <linux/bpf.h>
-<<<<<<< HEAD
-=======
 #include <linux/capability.h>
->>>>>>> revendor
 #include <linux/errqueue.h>
 #include <linux/if.h>
 #include <linux/if_alg.h>

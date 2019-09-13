@@ -73,11 +73,7 @@ func getType(v *View) metricdata.Type {
 	}
 }
 
-<<<<<<< HEAD
-func getLableKeys(v *View) []metricdata.LabelKey {
-=======
 func getLabelKeys(v *View) []metricdata.LabelKey {
->>>>>>> revendor
 	labelKeys := []metricdata.LabelKey{}
 	for _, k := range v.TagKeys {
 		labelKeys = append(labelKeys, metricdata.LabelKey{Key: k.Name()})
@@ -91,11 +87,7 @@ func viewToMetricDescriptor(v *View) *metricdata.Descriptor {
 		Description: v.Description,
 		Unit:        getUnit(v.Measure.Unit()),
 		Type:        getType(v),
-<<<<<<< HEAD
-		LabelKeys:   getLableKeys(v),
-=======
 		LabelKeys:   getLabelKeys(v),
->>>>>>> revendor
 	}
 }
 

@@ -470,13 +470,8 @@ func WithChannelzParentID(id int64) DialOption {
 // service config provided by the resolver and provides a hint to the resolver
 // to not fetch service configs.
 //
-<<<<<<< HEAD
-// Note that, this dial option only disables service config from resolver. If
-// default service config is provided, grpc will use the default service config.
-=======
 // Note that this dial option only disables service config from resolver. If
 // default service config is provided, gRPC will use the default service config.
->>>>>>> revendor
 func WithDisableServiceConfig() DialOption {
 	return newFuncDialOption(func(o *dialOptions) {
 		o.disableServiceConfig = true

@@ -2458,8 +2458,6 @@ const (
 	BPF_FD_TYPE_UPROBE                  = 0x4
 	BPF_FD_TYPE_URETPROBE               = 0x5
 )
-<<<<<<< HEAD
-=======
 
 type CapUserHeader struct {
 	Version uint32
@@ -2477,4 +2475,3 @@ const (
 	LINUX_CAPABILITY_VERSION_2 = 0x20071026
 	LINUX_CAPABILITY_VERSION_3 = 0x20080522
 )
->>>>>>> revendor

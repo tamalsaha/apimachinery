@@ -137,12 +137,9 @@ func DialContext(ctx context.Context, target string, opts ...DialOption) (conn *
 		opt.apply(&cc.dopts)
 	}
 
-<<<<<<< HEAD
-=======
 	chainUnaryClientInterceptors(cc)
 	chainStreamClientInterceptors(cc)
 
->>>>>>> revendor
 	defer func() {
 		if err != nil {
 			cc.Close()

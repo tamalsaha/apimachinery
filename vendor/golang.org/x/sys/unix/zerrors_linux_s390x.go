@@ -229,10 +229,7 @@ const (
 	BPF_F_INDEX_MASK                     = 0xffffffff
 	BPF_F_INGRESS                        = 0x1
 	BPF_F_INVALIDATE_HASH                = 0x2
-<<<<<<< HEAD
-=======
 	BPF_F_LOCK                           = 0x4
->>>>>>> revendor
 	BPF_F_MARK_ENFORCE                   = 0x40
 	BPF_F_MARK_MANGLED_0                 = 0x20
 	BPF_F_NO_COMMON_LRU                  = 0x2
@@ -263,10 +260,7 @@ const (
 	BPF_JLE                              = 0xb0
 	BPF_JLT                              = 0xa0
 	BPF_JMP                              = 0x5
-<<<<<<< HEAD
-=======
 	BPF_JMP32                            = 0x6
->>>>>>> revendor
 	BPF_JNE                              = 0x50
 	BPF_JSET                             = 0x40
 	BPF_JSGE                             = 0x70
