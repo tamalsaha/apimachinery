@@ -164,6 +164,7 @@ crds_to_patch := kubedb.com_elasticsearches.yaml \
 					kubedb.com_mysqls.yaml \
 					kubedb.com_perconaxtradbs.yaml \
 					kubedb.com_postgreses.yaml \
+					kubedb.com_proxysqls.yaml \
 					kubedb.com_redises.yaml
 
 .PHONY: patch-crds
